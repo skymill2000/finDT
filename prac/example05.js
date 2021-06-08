@@ -32,7 +32,14 @@ let car3 = {
 }
 
 let cars = [car, car2, car3];
-console.log(cars[0].name);
-console.log(cars[1].name);
-console.log(cars[2].name);
-console.log(cars[1].ph);
+// console.log(cars[0].name);
+// console.log(cars[1].name);
+// console.log(cars[2].name);
+
+for(var i =0; i<cars.length; i++){
+    console.log(cars[i].name);
+}
+
+cars.map((car)=>{
+    console.log(car.name);
+})
