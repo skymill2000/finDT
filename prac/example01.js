@@ -9,5 +9,5 @@ let obj = {
 }
 
 
-console.log(name, age,obj);
+console.log(name, age, obj);
 //특정항목을 터미널에 출력합니다.
