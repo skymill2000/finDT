@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
-const Welcome = () => {
-  return (<h1>안녕하세요 ~ 님</h1>);
+const Welcome = ({username, age}) => {
+  return (<h1>안녕하세요 {username}(이름) {age}(세) 님</h1>);
 }
 
 
@@ -10,15 +10,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>
-          안녕하세요
-        </h1>
-        <Welcome></Welcome>
-        <Welcome></Welcome>
-        <Welcome></Welcome>
-        <p>
-          2일차 기능 테스트
-        </p>
+        <Welcome username="유관우"></Welcome>
+        <Welcome username="홍길동"></Welcome>
+        <Welcome username="고길동"></Welcome>
       </header>
     </div>
   );
