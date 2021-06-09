@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 
 const UserList = () => {
-    const [userList, setUserList] =useState([
+    const [carList, setcarList] =useState([
         {
             name : "bmw",
             ph : 500,
@@ -15,13 +15,12 @@ const UserList = () => {
             name : "tico",
             ph : 12,
         },
-
     ])
     return (
         <div>
-            <p>차이름은 : {userList[0].name}</p>
-            <p>차이름은 : {userList[1].name}</p>
-            <p>차이름은 : {userList[2].name}</p>
+            {carList.map(car => {
+                return(<p>자동차 이름은 {car.name}</p>)
+            })}
         </div>
     )
 }
