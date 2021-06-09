@@ -1,22 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 
+const Welcome = () => {
+  return (<h1>안녕하세요 ~ 님</h1>);
+}
+
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>
+          안녕하세요
+        </h1>
+        <Welcome></Welcome>
+        <Welcome></Welcome>
+        <Welcome></Welcome>
         <p>
-        2일차 기능 테스트
+          2일차 기능 테스트
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
