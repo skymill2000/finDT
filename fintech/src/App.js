@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
 
 const Welcome = ({username, age}) => {
@@ -7,12 +8,11 @@ const Welcome = ({username, age}) => {
 
 
 function App() {
+  const [username, setUsername] = useState("입력된 이름이 없습니다.");
   return (
     <div className="App">
       <header className="App-header">
-        <Welcome username="유관우"></Welcome>
-        <Welcome username="홍길동"></Welcome>
-        <Welcome username="고길동"></Welcome>
+        <Welcome username={username} age="33"></Welcome>
       </header>
     </div>
   );
