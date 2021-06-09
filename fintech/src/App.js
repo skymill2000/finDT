@@ -9,10 +9,16 @@ const Welcome = ({username, age}) => {
 
 function App() {
   const [username, setUsername] = useState("입력된 이름이 없습니다.");
+  const changeName = (event) =>{
+    console.log(event.target.value);
+    setUsername(event.target.value);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <Welcome username={username} age="33"></Welcome>
+        <input onChange={changeName}></input>
       </header>
     </div>
   );
