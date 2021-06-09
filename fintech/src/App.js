@@ -1,18 +1,14 @@
 import logo from './logo.svg';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import FirstExample from './components/FirstExample';
-import UserList from './components/UserList';
+import NewsPage from './pages/NewsPage';
 
 
 function App() {
   return (    
   <Router>
     <Switch>
-      <Route path="/test" exact>
-        <FirstExample></FirstExample>
-      </Route>
-      <Route path="/list" exact>
-        <UserList></UserList>
+      <Route path="/news" exact>
+        <NewsPage/>
       </Route>
   </Switch>
 </Router>)
