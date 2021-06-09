@@ -1,9 +1,17 @@
-import FirstExample from './components/FirstExample';
-import UserList from './components/UserList';
 import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 function App() {
-  return (<UserList/>)
+  return     
+  <Router>
+  <Switch>
+    <Route path="/axios" exact>
+
+    </Route>
+  </Switch>
+</Router>
+
 }
 
 export default App;
