@@ -10,6 +10,18 @@ const ListPage = () => {
     getAccountList();
   }, []);
   const getAccountList = () => {
+    const option = {
+        method : "GET",
+        url : "/v2.0/user/me",
+        headers :{
+            Authorization: `bearer ${localStorage.getItem("accessToken")}`,
+        },
+        params : {
+            user_seq_no : localStorage.getItem("userSeqNum")
+        }
+    }
+
+
     axios(option).then((response) => {
       console.log(response.data);
       setAccountList(response.data.res_list);
