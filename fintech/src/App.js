@@ -5,6 +5,7 @@ import MainPage from './pages/MainPage';
 import AuthResultPage from './pages/AuthResultPage';
 import ListPage from './pages/ListPage';
 
+import BalancePage from './pages/BalancePage';
 
 function App() {
   return (    
@@ -21,6 +22,9 @@ function App() {
       </Route>
       <Route path="/list" exact>
         <ListPage/>
+      </Route>
+      <Route path="/balance" exact>
+        <BalancePage></BalancePage>
       </Route>
   </Switch>
 </Router>)
