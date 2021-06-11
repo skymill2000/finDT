@@ -18,13 +18,14 @@ const AuthResultPage = () => {
   }, []);
 
   const getAccessToken = () => {
-    const sendData = {
+    const sendData = qs.stringify({
         code : code,
         client_id : "q7kH44ThJwjpvNRg0BbJvE1yxvx5X53DKz1rNgPF",
         client_secret : "yVT6irMr2h4ZTHzZY7sDpbvhm1nlOzr4nP7DYRVy",
         redirect_uri : "http://localhost:3000/authResult",
         grant_type : "authorization_code"
-    }
+    })
+    //?code=dsfjklaej&client_id=123213 xwwwurlencoded로 데이터 문자열 변경
 
     const option = {
         method : "POST",
