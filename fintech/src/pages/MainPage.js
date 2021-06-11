@@ -11,7 +11,6 @@ const MainPage = () => {
     let authPageUrl = `https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=${clientId}&redirect_uri=http://localhost:3000/authResult&scope=login inquiry transfer&state=12345678901234567890123456789012&auth_type=0`;
     tmpwindow.location.href = authPageUrl;
   };
-
   return (
     <>
       <Header title="사용자 인증"></Header>

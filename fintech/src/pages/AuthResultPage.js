@@ -38,6 +38,11 @@ const AuthResultPage = () => {
 
     axios(option).then(response => {
         console.log(response.data);
+        setaccessToken(response.data.access_token);
+        localStorage.setItem("accessToken", response.data.access_token);
+        localStorage.setItem("userSeqNum", response.data.user_seq_no);
+        window.opener.location.href = "/list";
+        window.close();
     })
   };
 
